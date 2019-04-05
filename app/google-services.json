@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "678161023123",
+    "firebase_url": "https://haberapp-209dc.firebaseio.com",
+    "project_id": "haberapp-209dc",
+    "storage_bucket": "haberapp-209dc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:678161023123:android:24ac0242c7be4aa7",
+        "android_client_info": {
+          "package_name": "com.example.gunlukhaberapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "678161023123-fc1okrlgn6eiia2ooclou167mrlnm7s4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gunlukhaberapp",
+            "certificate_hash": "fc70bcc69d5690b9e51bd24d733495a93f6242e3"
+          }
+        },
+        {
+          "client_id": "678161023123-vqjh59f4394jrumglj656eee4rd4sq2h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJKCPfYyUDTsIARB1x0677mddnQGdYfFc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "678161023123-vqjh59f4394jrumglj656eee4rd4sq2h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

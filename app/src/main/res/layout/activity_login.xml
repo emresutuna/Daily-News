@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_gravity="center"
+
+    android:gravity="center"
+    tools:context=".LoginActivity">
+    <RelativeLayout
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:id="@+id/loading"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:layout_centerInParent="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:id="@+id/mainScroll"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="500dp">
+
+        <android.support.v7.widget.CardView
+            android:layout_margin="20dp"
+            app:cardCornerRadius="20dp"
+            android:elevation="10dp"
+            android:id="@+id/card_view2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_margin="20dp"
+                    android:gravity="center"
+                    android:layout_weight="2"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/loginChoose"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:background="@drawable/choosing_button"
+                        android:textAllCaps="false"
+                        android:text="Giriş"
+                        android:textColor="#FFF"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/chooseRegister"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:background="@drawable/unchoosing_button"
+                        android:textAllCaps="false"
+                        android:text="Kayıt Ol"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp" />
+                </LinearLayout>
+                <EditText
+                    android:drawableLeft="@drawable/ic_person_outline_black_24dp"
+                    android:background="@drawable/edittext_custom_view"
+                    android:id="@+id/etMail"
+                    android:inputType="textEmailAddress"
+                    android:textColorHint="#f000"
+                    android:hint="Email"
+                    android:paddingLeft="5dp"
+                    android:layout_width="250dp"
+                    android:layout_height="60dp" />
+                <EditText
+                    android:drawableLeft="@drawable/ic_lock_outline_black_24dp"
+                    android:background="@drawable/edittext_custom_view"
+                    android:id="@+id/etPassword"
+                    android:layout_marginTop="10dp"
+                    android:inputType="textPassword"
+                    android:textColorHint="#f000"
+                    android:hint="Şifre"
+                    android:paddingLeft="5dp"
+                    android:layout_width="250dp"
+                    android:layout_height="60dp" />
+                <Button
+                    android:textAllCaps="false"
+                    android:background="#ff4c4c"
+                    android:id="@+id/login"
+                    android:text="Giriş Yap"
+                    android:layout_margin="10dp"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:id="@+id/registerScroll"
+        android:gravity="center"
+android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.CardView
+            android:layout_margin="20dp"
+            app:cardCornerRadius="20dp"
+            android:elevation="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_margin="20dp"
+                    android:gravity="center"
+                    android:layout_weight="2"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/choosingButton"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:background="@drawable/unchoosing_button"
+                        android:textAllCaps="false"
+                        android:text="Giriş"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp" />
+                    <Button
+                        android:id="@+id/rgstrChoose"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:background="@drawable/choosing_button"
+                        android:textColor="#FFF"
+                        android:textAllCaps="false"
+                        android:text="Kayıt Ol"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp" />
+                </LinearLayout>
+                <EditText
+
+                    android:background="@drawable/edittext_custom_view"
+                    android:id="@+id/rgstName"
+                    android:inputType="textEmailAddress"
+                    android:textColorHint="#f000"
+                    android:hint="Ad"
+                    android:paddingLeft="5dp"
+                    android:layout_width="250dp"
+                    android:layout_height="60dp" />
+                <EditText
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittext_custom_view"
+                    android:id="@+id/rgstSurname"
+                    android:inputType="textEmailAddress"
+                    android:textColorHint="#f000"
+                    android:hint="Soyad"
+                    android:paddingLeft="5dp"
+                    android:layout_width="250dp"
+                    android:layout_height="60dp" />
+                <EditText
+                    android:background="@drawable/edittext_custom_view"
+                    android:id="@+id/rgstrEmail"
+                    android:layout_marginTop="10dp"
+                    android:inputType="textEmailAddress"
+                    android:textColorHint="#f000"
+                    android:hint="Email"
+                    android:paddingLeft="5dp"
+                    android:layout_width="250dp"
+                    android:layout_height="60dp" />
+                <EditText
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittext_custom_view"
+                    android:id="@+id/rgstPassword"
+                    android:inputType="textPassword"
+                    android:textColorHint="#f000"
+                    android:hint="Şifre"
+                    android:paddingLeft="5dp"
+                    android:layout_width="250dp"
+                    android:layout_height="60dp" />
+                <Button
+                    android:textAllCaps="false"
+                    android:background="#ff4c4c"
+                    android:id="@+id/register"
+                    android:text="Kayıt Ol"
+                    android:layout_margin="10dp"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>
