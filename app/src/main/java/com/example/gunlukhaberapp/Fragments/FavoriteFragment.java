@@ -84,7 +84,6 @@ public class FavoriteFragment extends Fragment {
         descriptionFb= new ArrayList<String>();
         urlFb=new ArrayList<String>();
         getData();
-
         return view;
     }
 }

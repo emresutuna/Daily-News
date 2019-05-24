@@ -46,20 +46,13 @@ public class CategoryDetail extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.category_detail,container,false);
         list=(ListView) view.findViewById(R.id.listCategory);
-
-
-        //category=bundle.getString("category");
-       // category=getArguments().getString("category");
         pullToRefresh = view.findViewById(R.id.pullToRefreshCat);
-        //pullToRefresh.setOnRefreshListener();
         if(category.equals("busines")){
             apiService= ApiClient.getClient().create(GetNewsServicce.class);
             Call<News> call=apiService.getBusinessNew();
@@ -70,14 +63,11 @@ public class CategoryDetail extends Fragment {
                     news=response.body();
                     articles=new ArrayList<Article>();
                     articles=news.getArticles();
-
                     newsAdapter=new NewsAdapter(getActivity(),articles);
-
                     list.setAdapter(newsAdapter);
                     newsAdapter.notifyDataSetChanged();
                     Log.d("Test",news.getStatus());
                 }
-
                 @Override
                 public void onFailure(Call<News> call, Throwable t) {
 
@@ -93,17 +83,13 @@ public class CategoryDetail extends Fragment {
                     articles=new ArrayList<Article>();
                     news=response.body();
                     articles=news.getArticles();
-
                     newsAdapter=new NewsAdapter(getActivity(),articles);
-
                     list.setAdapter(newsAdapter);
                     newsAdapter.notifyDataSetChanged();
                     Log.d("Test",news.getStatus());
                 }
-
                 @Override
                 public void onFailure(Call<News> call, Throwable t) {
-
                 }
             });
 
@@ -117,20 +103,16 @@ public class CategoryDetail extends Fragment {
                     articles=new ArrayList<Article>();
                     news=response.body();
                     articles=news.getArticles();
-
                     newsAdapter=new NewsAdapter(getActivity(),articles);
-
                     list.setAdapter(newsAdapter);
                     newsAdapter.notifyDataSetChanged();
                     Log.d("Test",news.getStatus());
                 }
-
                 @Override
                 public void onFailure(Call<News> call, Throwable t) {
 
                 }
             });
-
         }else if(category.equals("tech")){
             apiService= ApiClient.getClient().create(GetNewsServicce.class);
             Call<News> call=apiService.getTechNew();
@@ -141,20 +123,15 @@ public class CategoryDetail extends Fragment {
                     articles=new ArrayList<Article>();
                     news=response.body();
                     articles=news.getArticles();
-
                     newsAdapter=new NewsAdapter(getActivity(),articles);
-
                     list.setAdapter(newsAdapter);
                     newsAdapter.notifyDataSetChanged();
                     Log.d("Test",news.getStatus());
                 }
-
                 @Override
                 public void onFailure(Call<News> call, Throwable t) {
-
                 }
             });
-
         }else if(category.equals("science")){
             apiService= ApiClient.getClient().create(GetNewsServicce.class);
             Call<News> call=apiService.getScienceNew();
@@ -165,14 +142,10 @@ public class CategoryDetail extends Fragment {
                     articles=new ArrayList<Article>();
                     news=response.body();
                     articles=news.getArticles();
-
                     newsAdapter=new NewsAdapter(getActivity(),articles);
-
                     list.setAdapter(newsAdapter);
                     newsAdapter.notifyDataSetChanged();
-                    Log.d("Test",news.getStatus());
                 }
-
                 @Override
                 public void onFailure(Call<News> call, Throwable t) {
 
@@ -189,9 +162,7 @@ public class CategoryDetail extends Fragment {
                     articles=new ArrayList<Article>();
                     news=response.body();
                     articles=news.getArticles();
-
                     newsAdapter=new NewsAdapter(getActivity(),articles);
-
                     list.setAdapter(newsAdapter);
                     newsAdapter.notifyDataSetChanged();
                     Log.d("Test",news.getStatus());
@@ -199,7 +170,6 @@ public class CategoryDetail extends Fragment {
 
                 @Override
                 public void onFailure(Call<News> call, Throwable t) {
-
                 }
             });
 

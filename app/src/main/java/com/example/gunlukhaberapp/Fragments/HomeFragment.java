@@ -52,10 +52,8 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.home_fragment,container,false);
          list=(ListView) view.findViewById(R.id.newsList);
-
         pullToRefresh = view.findViewById(R.id.pullToRefresh);
         pullToRefresh.setOnRefreshListener(this);
-
         apiService= ApiClient.getClient().create(GetNewsServicce.class);
         Call<News> call=apiService.getNews();
         call.enqueue(new Callback<News>() {
@@ -69,17 +67,14 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
                 newsAdapter.notifyDataSetChanged();
                 Log.d("Test",news.getStatus());
             }
-
             @Override
             public void onFailure(Call<News> call, Throwable t) {
-
             }
         });
 
         return  view;
     }
     void refreshData(){
-
         apiService= ApiClient.getClient().create(GetNewsServicce.class);
         Call<News> call=apiService.getNews();
         call.enqueue(new Callback<News>() {
@@ -88,15 +83,12 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
                 Log.d("Responses: ",new Gson().toJson(response.body()));
                 news=response.body();
                 articles=news.getArticles();
-
                 newsAdapter=new NewsAdapter(getActivity(),articles);
                 list.setAdapter(newsAdapter);
-                Log.d("Test",news.getStatus());
             }
 
             @Override
             public void onFailure(Call<News> call, Throwable t) {
-
             }
         });
         pullToRefresh.setRefreshing(false);
@@ -107,7 +99,4 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
         pullToRefresh.setRefreshing(true);
         refreshData();
     }
-
-
-
 }

@@ -143,6 +143,8 @@ button.setOnClickListener(new View.OnClickListener() {
                         .addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
+                                rgstrScroll.setVisibility(View.VISIBLE);
+                                loading.setVisibility(View.GONE);
                                 Toast.makeText(getApplicationContext(),"Kullanıcı Oluşturma Hatası!",Toast.LENGTH_SHORT).show();
                             }
                         });
